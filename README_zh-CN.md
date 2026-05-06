@@ -60,6 +60,7 @@ OmniDocBench
 - [引用](#引用)
 
 ## 更新
+[2026/04/30] 从版本**v1.6** 更新到 **v1.7**,新增QianfanOCR的榜单,支持skills方式评测。
 
 [2026/04/09] **重大版本更新**：从版本**v1.5** 更新到 **v1.6**
   - 评测代码：(1) 我们提出 **Multi-Granularity Adaptive Matching (MGAM)**，通过对预测端进行自适应粒度调整来消除匹配偏差。核心设计原则是：保持 ground truth 不变，仅在预测端搜索最优分段粒度。(2) 为优化CDM的部署，将node.js、katex等依赖包用python版本重写并替换，速度优化3倍左右。
@@ -383,7 +384,6 @@ docker run --rm --entrypoint bash \
 ```bash
 bash script/build_repro_docker_image.sh
 ```
-
 </details>
 
 <details>
@@ -488,6 +488,15 @@ python pdf_validation.py --config configs/end2end.yaml
 ```bash
 python pdf_validation.py --config <config_path>
 ```
+</details>
+
+<details>
+<summary><b> 方式C：skills </b></summary>
+```bash
+ 我需要用omnidocbench做xx模型的评测，用docker部署，GT路径是/path/OmniDocBench.json，预测结果路径是/path/predfolder，需要CDM，请帮我跑分
+```
+</details>
+
 
 ### 端到端评测
 
@@ -1884,6 +1893,11 @@ config中参数解释以及数据集格式请参考`Layout检测`小节，公式
       <td>FireRed-OCR</td>
       <td><a href="https://github.com/FireRedTeam/FireRed-OCR">FireRed-OCR</a></td>
       <td><a href="https://huggingface.co/FireRedTeam/FireRed-OCR">HuggingFace FireRed-OCR</a></td>
+    </tr>
+    <tr>
+      <td>Qianfan-OCR</td>
+      <td><a href="https://huggingface.co/baidu/Qianfan-OCR">Qianfan-OCR</a></td>
+      <td><a href="https://huggingface.co/baidu/Qianfan-OCR">HuggingFace Qianfan-OCR</a></td>
     </tr>
     <tr>
       <td>dots.ocr</td>

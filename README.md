@@ -62,22 +62,24 @@ Currently supported metrics include:
 
 ## Updates
 
+[2026/04/30] Updated from **v1.6** to **v1.7**, added the Qianfan-OCR leaderboard, and supported skills-based evaluation.
+
 [2026/04/10] **Major update**: Updated from **v1.5** to **v1.6**
   - Evaluation code: (1) We propose **Multi-Granularity Adaptive Matching (MGAM)**, which eliminates matching bias through adaptive granularity adjustment on the prediction side. The core principle is to keep the ground truth unchanged and **search for the optimal segmentation granularity only on the prediction side.** (2) To optimize the deployment of CDM, dependency packages such as Node.js and KaTeX have been rewritten in Python and replaced, resulting in an approximately 3x speed improvement.
   - Benchmark dataset: (1) Added **296 new pages**, samples are chosen to cover the **more challenging scenario categories** in document parsing, including complex nested tables, dense mathematical formula layouts, and unconventional layout structures; (2) Fixed typos in some text and table annotations；
-  - Note: The main branch of evaludation code (this repo) and dataset in HuggingFace and OpenDataLab are now updated to Version **v1.6**, if you still want to evaluate your model in v1.0 or v1.5, please checkout to specific branch.
+  - Note: The main branch of evaluation code (this repo) and dataset in HuggingFace and OpenDataLab are now updated to Version **v1.6**, if you still want to evaluate your model in v1.0 or v1.5, please checkout to specific branch.
 
 [2026/03/31] Update the model evaluation for PaddleOCR-VL-1.5, Youtu-Parsing, FireRed-OCR, Logics-Parsing-v2, Ovis2.6-30B-A3B, MinerU2.5, HunyuanOCR, FD-RL, DeepSeek-OCR-2, MonkeyOCR-pro-3B, OCRVerse, dots.ocr, Dolphin-v2, MonkeyOCR-3B, POINTS-Reader, Gemini-3 Flash, Gemini-3 Pro, Kimi 2.5, GPT5.2, GPT-4o, InternVL3.5, GLM-OCR, OpenDoc and Mathpix. Added inference scripts for the models listed above.
 
 [2025/11/04] Add a Docker runtime environment, including the evaluation environment and the CDM environment. 
 
-[2025/10/28] Update PaddleOCR-VL, Qwen3-VL-235B-A22B-Instruct, Deepseek-OCR, Dolphin-1.5 model evaluation.
+[2025/10/28] Update PaddleOCR-VL, Qwen3-VL-235B-A22B-Instruct, DeepSeek-OCR, Dolphin-1.5 model evaluation.
 
 [2025/09/25] **Major update**: Updated from **v1.0** to **v1.5**
   - Evaluation code: (1) Updated the **hybrid matching algorithm**, allowing formulas and text to be matched with each other, which alleviates score errors caused by models outputting formulas as unicode; (2) Integrated **CDM** calculation directly into the metric section, so users with a CDM environment can compute the metric directly by calling `CDM` in config file. The previous interface for outputting formula matching pairs as a JSON file is still retained, now named `CDM_plain` in config file.
-  - Benchmark dataset: (1) Increased the image resolution for newspaper and note types from 72 DPI to **200 DPI**; (2) Added **374 new pages**, balanced the number of Chinese and English pages, and increased the proportion of pages containing formulas; (3) Formulas update language atrributes; (4) Fixed typos in some text and table annotations.
+  - Benchmark dataset: (1) Increased the image resolution for newspaper and note types from 72 DPI to **200 DPI**; (2) Added **374 new pages**, balanced the number of Chinese and English pages, and increased the proportion of pages containing formulas; (3) Formulas update language attributes; (4) Fixed typos in some text and table annotations.
   - Leaderboard: (1) Removed the Chinese/English grouping, now calculating the average score across all pages; (2) The **Overall** metric is now calculated as ((1 - text Edit distance) * 100 + table TEDS + formula CDM) / 3;
-  - Note: The `main` branch of evaludation code (this repo) and dataset in HuggingFace and OpenDataLab are now updated to Version **v1.5**, if you still want to evaluate your model in v1.0, please checkout to branch `v1_0`.
+  - Note: The `main` branch of evaluation code (this repo) and dataset in HuggingFace and OpenDataLab are now updated to Version **v1.5**, if you still want to evaluate your model in v1.0, please checkout to branch `v1_0`.
   
 [2025/09/09] Updated Dolphin model evaluation with the latest inference script and model weights; Add Dolphin infer script;
 
@@ -404,7 +406,7 @@ bash script/build_repro_docker_image.sh
 ```bash
 conda create -n omnidocbench python=3.10 -y
 conda activate omnidocbench
-git clone <repo_url> && cd Omnidocbench_v1.6
+git clone <repo_url> && cd Omnidocbench
 pip install -e .
 python -c "from src.core.pipeline import run_config_file; print('OK')"
 ```
@@ -496,6 +498,15 @@ All evaluation inputs are configured through [configs/end2end.yaml](./configs/en
 ```bash
 python pdf_validation.py --config <config_path>
 ```
+</details>
+
+<details>
+<summary><b>Option C: skills</b></summary>
+
+```bash
+I need to evaluate an xx model with OmniDocBench using Docker. The GT path is /path/OmniDocBench.json, the prediction result path is /path/predfolder, and CDM is required. Please help me run the evaluation.
+```
+</details>
 
 ### End-to-End Evaluation
 
@@ -1891,6 +1902,11 @@ We provide several tools in the `tools` directory:
       <td>FireRed-OCR</td>
       <td><a href="https://github.com/FireRedTeam/FireRed-OCR">FireRed-OCR</a></td>
       <td><a href="https://huggingface.co/FireRedTeam/FireRed-OCR">HuggingFace FireRed-OCR</a></td>
+    </tr>
+    <tr>
+      <td>Qianfan-OCR</td>
+      <td><a href="https://huggingface.co/baidu/Qianfan-OCR">Qianfan-OCR</a></td>
+      <td><a href="https://huggingface.co/baidu/Qianfan-OCR">HuggingFace Qianfan-OCR</a></td>
     </tr>
     <tr>
       <td>dots.ocr</td>
