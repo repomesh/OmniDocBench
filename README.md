@@ -1886,7 +1886,7 @@ We provide several tools in the `tools` directory:
   <tbody>
     <tr>
     <tr>
-      <td>MinerU</td>
+      <td>MinerU-Pipeline</td>
       <td><a href="https://github.com/opendatalab/MinerU">MinerU</a></td>
       <td>3.3.0</td>
     </tr>
