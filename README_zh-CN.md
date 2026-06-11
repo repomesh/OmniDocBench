@@ -763,6 +763,17 @@ $$\text{Overall} = \frac{(1-\textit{Text Edit Distance}) \times 100 + \textit{Ta
             <td>0.167</td>
         </tr>
         <tr>
+            <td>MinerU-Pipeline</td>
+            <td>Pipeline Tools</td>
+            <td>-</td>
+            <td>85.75</td>
+            <td>0.063</td>
+            <td>83.07</td>
+            <td>80.43</td>
+            <td>88.22</td>
+            <td>0.154</td>
+        </tr>
+        <tr>
             <td>olmOCR</td>
             <td>Specialized VLMs</td>
             <td>7B</td>
@@ -1866,8 +1877,8 @@ config中参数解释以及数据集格式请参考`Layout检测`小节，公式
   <tbody>
     <tr>
       <td>MinerU</td>
-      <td><a href="https://mineru.org.cn/">MinerU</a></td>
-      <td>2.1.1</td>
+      <td><a href="https://github.com/opendatalab/MinerU">MinerU</a></td>
+      <td>3.3.0</td>
     </tr>
     <tr>
       <td>MinerU2-VLM</td>
@@ -1878,6 +1889,11 @@ config中参数解释以及数据集格式请参考`Layout检测`小节，公式
       <td>MinerU2.5</td>
       <td><a href="https://github.com/opendatalab/MinerU">MinerU</a></td>
       <td><a href="https://huggingface.co/opendatalab/MinerU2.5-2509-1.2B">HuggingFace MinerU2.5-2509-1.2B</a></td>
+    </tr>
+    <tr>
+      <td>MinerU2.5-Pro</td>
+      <td><a href="https://github.com/opendatalab/MinerU">MinerU</a></td>
+      <td><a href="https://huggingface.co/opendatalab/MinerU2.5-Pro-2605-1.2B">HuggingFace MinerU2.5-Pro-2605-1.2B</a></td>
     </tr>
     <tr>
       <td>GLM-OCR</td>
