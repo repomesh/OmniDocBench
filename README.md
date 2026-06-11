@@ -773,6 +773,17 @@ $$\text{Overall} = \frac{(1-\textit{Text Edit Distance}) \times 100 + \textit{Ta
             <td>0.167</td>
         </tr>
         <tr>
+            <td>MinerU-Pipeline</td>
+            <td>Pipeline Tools</td>
+            <td>-</td>
+            <td>85.75</td>
+            <td>0.063</td>
+            <td>83.07</td>
+            <td>80.43</td>
+            <td>88.22</td>
+            <td>0.154</td>
+        </tr>
+        <tr>
             <td>olmOCR</td>
             <td>Specialized VLMs</td>
             <td>7B</td>
