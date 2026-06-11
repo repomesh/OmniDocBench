@@ -1876,7 +1876,7 @@ config中参数解释以及数据集格式请参考`Layout检测`小节，公式
   </thead>
   <tbody>
     <tr>
-      <td>MinerU</td>
+      <td>MinerU-Pipeline</td>
       <td><a href="https://github.com/opendatalab/MinerU">MinerU</a></td>
       <td>3.3.0</td>
     </tr>
