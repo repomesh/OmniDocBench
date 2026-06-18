@@ -776,12 +776,12 @@ $$\text{Overall} = \frac{(1-\textit{Text Edit Distance}) \times 100 + \textit{Ta
             <td>MinerU-Pipeline</td>
             <td>Pipeline Tools</td>
             <td>-</td>
-            <td>85.75</td>
-            <td>0.063</td>
+            <td>86.47</td>
+            <td>0.055</td>
             <td>83.07</td>
-            <td>80.43</td>
-            <td>88.22</td>
-            <td>0.154</td>
+            <td>81.88</td>
+            <td>88.68</td>
+            <td>0.153</td>
         </tr>
         <tr>
             <td>olmOCR</td>
@@ -1888,7 +1888,7 @@ We provide several tools in the `tools` directory:
     <tr>
       <td>MinerU-Pipeline</td>
       <td><a href="https://github.com/opendatalab/MinerU">MinerU</a></td>
-      <td>3.3.0</td>
+      <td>3.4.0</td>
     </tr>
     <tr>
       <td>MinerU2-VLM</td>
