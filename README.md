@@ -618,6 +618,17 @@ $$\text{Overall} = \frac{(1-\textit{Text Edit Distance}) \times 100 + \textit{Ta
             <td>91.98</td>
             <td>0.137</td>
         </tr>
+         <tr>
+            <td>ABot-OCR</td>
+            <td>Specialized VLMs</td>
+            <td>2B</td>
+            <td>93.30</td>
+            <td>0.037</td>
+            <td>94.86</td>
+            <td>88.69</td>
+            <td>91.87</td>
+            <td>0.137</td>
+        </tr>
         <tr>
             <td>FireRed-OCR</td>
             <td>Specialized VLMs</td>
@@ -1904,6 +1915,11 @@ We provide several tools in the `tools` directory:
       <td>MinerU2.5-Pro</td>
       <td><a href="https://github.com/opendatalab/MinerU">MinerU</a></td>
       <td><a href="https://huggingface.co/opendatalab/MinerU2.5-Pro-2605-1.2B">HuggingFace MinerU2.5-Pro-2605-1.2B</a></td>
+    </tr>
+        <tr>
+      <td>ABot-OCR</td>
+      <td><a href="https://github.com/amap-cvlab/ABot-OCR">ABot-OCR</a></td>
+      <td><a href="https://huggingface.co/acvlab/ABot-OCR">HuggingFace ABot-OCR</a></td>
     </tr>
     <tr>
       <td>GLM-OCR</td>
