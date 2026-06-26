@@ -1911,7 +1911,6 @@ config中参数解释以及数据集格式请参考`Layout检测`小节，公式
       <td><a href="https://github.com/amap-cvlab/ABot-OCR">ABot-OCR</a></td>
       <td><a href="https://huggingface.co/acvlab/ABot-OCR">HuggingFace ABot-OCR</a></td>
     </tr>
-    
     <tr>
       <td>GLM-OCR</td>
       <td><a href="https://github.com/zai-org/GLM-OCR">GLM-OCR</a></td>
